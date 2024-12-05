@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Order Tracking\n"
 "Report-Msgid-Bugs-To: YITH <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2024-02-22 17:05:15+00:00\n"
+"POT-Creation-Date: 2024-12-05 13:52:15+00:00\n"
 "PO-Revision-Date: 2016-06-13 16:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: plugin-fw\n"
 
-#: init.php:52
+#: init.php:53
 #, fuzzy
 msgid ""
 "YITH WooCommerce Product Gallery & Image Zoom is enabled but not effective. "
@@ -28,26 +28,26 @@ msgstr ""
 "YITH WooCommerce Zoom Magnifier está habilitado pero no es efectivo. "
 "Requiere WooCommerce para funcionar."
 
-#: init.php:67
+#: init.php:68
 msgid ""
 "You can't activate the free version of YITH WooCommerce Product Gallery & "
 "Image Zoom while you are using the premium one."
 msgstr ""
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:136
+#: lib/class.yith-ywzm-plugin-fw-loader.php:116
 msgid "Main image options"
 msgstr ""
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:137
+#: lib/class.yith-ywzm-plugin-fw-loader.php:117
 #: plugin-options/gallery-options.php:19
 msgid "Product gallery options"
 msgstr ""
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:138
+#: lib/class.yith-ywzm-plugin-fw-loader.php:118
 msgid "Premium Version"
 msgstr "Versión Premium"
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:191
+#: lib/class.yith-ywzm-plugin-fw-loader.php:171
 #, fuzzy
 msgid ""
 "YITH WooCommerce Product Gallery & Image Zoom  is available in an "
@@ -56,15 +56,15 @@ msgstr ""
 "YITH WooCommerce Zoom Magnifier está disponible en una espectacular versión "
 "PREMIUM con muchas nuevas opciones, descúbrela ahora."
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:192
+#: lib/class.yith-ywzm-plugin-fw-loader.php:172
 msgid "Premium version"
 msgstr "Versión Pemium"
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:200
+#: lib/class.yith-ywzm-plugin-fw-loader.php:180
 msgid "YITH WooCommerce Product Gallery & Image Zoom "
 msgstr ""
 
-#: lib/class.yith-ywzm-plugin-fw-loader.php:201
+#: lib/class.yith-ywzm-plugin-fw-loader.php:181
 #, fuzzy
 msgid ""
 "In YIT Plugins tab you can find  YITH WooCommerce Product Gallery & Image "

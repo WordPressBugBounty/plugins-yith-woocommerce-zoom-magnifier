@@ -82,8 +82,6 @@ if ( ! class_exists( 'YITH_YWZM_Plugin_FW_Loader' ) ) {
 			 */
 			add_action( 'admin_init', array( $this, 'register_pointer' ) );
 
-			add_action( 'plugins_loaded', array( $this, 'plugin_fw_loader' ), 15 );
-
 			// Add stylesheets and scripts files.
 			add_action( 'admin_menu', array( $this, 'register_panel' ), 5 );
 
@@ -99,24 +97,6 @@ if ( ! class_exists( 'YITH_YWZM_Plugin_FW_Loader' ) ) {
 			}
 			
 			add_action( 'before_woocommerce_init', array( $this, 'declare_wc_features_support' ) );
-		}
-
-
-		/**
-		 * Load YIT core plugin
-		 *
-		 * @since  1.0
-		 * @access public
-		 * @return void
-		 */
-		public function plugin_fw_loader() {
-			if ( ! defined( 'YIT_CORE_PLUGIN' ) ) {
-				global $plugin_fw_data;
-				if ( ! empty( $plugin_fw_data ) ) {
-					$plugin_fw_file = array_shift( $plugin_fw_data );
-					require_once $plugin_fw_file;
-				}
-			}
 		}
 
 		/**

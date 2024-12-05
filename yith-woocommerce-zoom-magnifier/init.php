@@ -3,13 +3,14 @@
  * Plugin Name: YITH WooCommerce Product Gallery & Image Zoom
  * Plugin URI: https://yithemes.com/themes/plugins/yith-woocommerce-zoom-magnifier/
  * Description: <code><strong>YITH WooCommerce Product Gallery & Image Zoom</strong></code> allows you to add a zoom effect to product images and a thumbnail slider for the product image gallery. <a href="https://yithemes.com/" target="_blank">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>.
- * Version: 2.37.0
+ * Version: 2.38.0
  * Author: YITH
  * Author URI: https://yithemes.com/
  * Text Domain: yith-woocommerce-zoom-magnifier
  * Domain Path: /languages/
- * WC requires at least: 9.1
- * WC tested up to: 9.3
+ * WC requires at least: 9.3
+ * WC tested up to: 9.5
+ * Requires Plugins: woocommerce
  * 
  * @author YITH <plugins@yithemes.com>
  **/
@@ -79,7 +80,7 @@ register_activation_hook ( __FILE__, 'yith_plugin_registration_hook' );
 defined( 'YITH_YWZM_FREE' ) || define( 'YITH_YWZM_FREE', '1' );
 defined ( 'YITH_YWZM_FREE_INIT' ) || define ( 'YITH_YWZM_FREE_INIT', plugin_basename ( __FILE__ ) );
 defined ( 'YITH_YWZM_SLUG' ) || define ( 'YITH_YWZM_SLUG', 'yith-woocommerce-zoom-magnifier' );
-defined ( 'YITH_YWZM_VERSION' ) || define ( 'YITH_YWZM_VERSION', '2.37.0' );
+defined ( 'YITH_YWZM_VERSION' ) || define ( 'YITH_YWZM_VERSION', '2.38.0' );
 defined ( 'YITH_YWZM_SCRIPT_VERSION' ) || define ( 'YITH_YWZM_SCRIPT_VERSION', '2.1.1' );
 
 defined ( 'YITH_YWZM_FILE' ) || define ( 'YITH_YWZM_FILE', __FILE__ );
@@ -90,11 +91,10 @@ defined ( 'YITH_YWZM_TEMPLATE_DIR' ) || define ( 'YITH_YWZM_TEMPLATE_DIR', YITH_
 defined ( 'YITH_YWZM_ASSETS_IMAGES_URL' ) || define ( 'YITH_YWZM_ASSETS_IMAGES_URL', YITH_YWZM_ASSETS_URL . '/images/' );
 defined ( 'YITH_YWZM_LIB_DIR' ) || define ( 'YITH_YWZM_LIB_DIR', YITH_YWZM_DIR . 'lib/' );
 
-/* Plugin Framework Version Check */
-if ( ! function_exists ( 'yit_maybe_plugin_fw_loader' ) && file_exists ( YITH_YWZM_DIR . 'plugin-fw/init.php' ) ) {
-    require_once ( YITH_YWZM_DIR . 'plugin-fw/init.php' );
-}
-yit_maybe_plugin_fw_loader ( YITH_YWZM_DIR );
+// Plugin Framework Loader.
+if ( file_exists( plugin_dir_path( __FILE__ ) . 'plugin-fw/init.php' ) ) {
+    require_once plugin_dir_path( __FILE__ ) . 'plugin-fw/init.php';
+}   
 
 if ( ! function_exists ( 'yith_ywzm_init' ) ) {
     /**
@@ -107,7 +107,9 @@ if ( ! function_exists ( 'yith_ywzm_init' ) ) {
         /**
          * Load text domain and start plugin
          */
-        load_plugin_textdomain ( 'yith-woocommerce-zoom-magnifier', false, dirname ( plugin_basename ( __FILE__ ) ) . '/languages/' );
+        if ( function_exists( 'yith_plugin_fw_load_plugin_textdomain' ) ) {
+            yith_plugin_fw_load_plugin_textdomain( 'yith-woocommerce-zoom-magnifier', basename( dirname( __FILE__ ) ) . '/languages' );
+        }
 
         add_option ( 'yith_wcmg_slider_direction', apply_filters ( 'yith_wcmg_slider_direction', 'left' ) );
 
