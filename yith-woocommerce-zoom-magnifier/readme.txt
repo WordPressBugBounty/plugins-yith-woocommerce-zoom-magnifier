@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: zoom, magnifier, slider, carousel, woocommerce
 Requires at least: 6.6
 Tested up to: 6.8
-Stable tag: 2.41.0
+Stable tag: 2.42.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -79,6 +79,11 @@ YITH WooCommerce Product Gallery & Image Zoom will add a new tab called "Product
 You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/yith-woocommerce-zoom-magnifier)
 
 == Changelog ==
+
+= Version 2.42.0 - Released: July 02, 2025 =
+
+* New: support for WooCommerce 10.0
+* Update: YITH plugin Framework
 
 = Version 2.41.0 - Released: June 04, 2025 =
 
