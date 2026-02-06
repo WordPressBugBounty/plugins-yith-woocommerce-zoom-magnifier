@@ -160,7 +160,7 @@ if ( ! class_exists( 'YITH_WCMG_Frontend' ) ) {
 				$wc_assets_path = str_replace( array( 'http:', 'https:' ), '', WC()->plugin_url() ) . '/assets/';
 
 				// Enqueue scripts.
-				wp_enqueue_script( 'prettyPhoto', $wc_assets_path . 'js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), WC()->version, true );
+				wp_enqueue_script( 'wc-prettyPhoto', $wc_assets_path . 'js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), WC()->version, true );
 				wp_enqueue_script( 'ywzm-magnifier' );
 				wp_enqueue_script( 'ywzm_frontend' );
 
@@ -180,7 +180,7 @@ if ( ! class_exists( 'YITH_WCMG_Frontend' ) ) {
 					apply_filters( 'ywzm_src_prettyphoto_script', YITH_WCMG_URL . 'assets/js/init.prettyPhoto.js' ),
 					array(
 						'jquery',
-						'prettyPhoto',
+						'wc-prettyPhoto',
 					),
 					false,
 					true
