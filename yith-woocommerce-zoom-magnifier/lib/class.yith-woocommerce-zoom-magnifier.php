@@ -142,8 +142,9 @@ if ( ! class_exists( 'YITH_WooCommerce_Zoom_Magnifier' ) ) {
 			$product_id = isset( $_POST['product_id'] ) ? $_POST['product_id'] : 0; // phpcs:ignore
 			$post       = get_post( $product_id ); // phpcs:ignore
 			$product    = wc_get_product( $product_id );
+			$is_public  = ( 'publish' === $post->post_status && false === post_password_required( $post ) );
 
-			if ( empty( $product ) ) {
+			if ( empty( $product ) || ! $is_public ) {
 				wp_send_json_error();
 			}
 

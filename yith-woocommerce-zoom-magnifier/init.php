@@ -3,7 +3,7 @@
  * Plugin Name: YITH WooCommerce Product Gallery & Image Zoom
  * Plugin URI: https://yithemes.com/themes/plugins/yith-woocommerce-zoom-magnifier/
  * Description: <code><strong>YITH WooCommerce Product Gallery & Image Zoom</strong></code> allows you to add a zoom effect to product images and a thumbnail slider for the product image gallery. <a href="https://yithemes.com/" target="_blank">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>.
- * Version: 2.52.0
+ * Version: 2.52.1
  * Author: YITH
  * Author URI: https://yithemes.com/
  * Text Domain: yith-woocommerce-zoom-magnifier
@@ -80,7 +80,7 @@ register_activation_hook ( __FILE__, 'yith_plugin_registration_hook' );
 defined( 'YITH_YWZM_FREE' ) || define( 'YITH_YWZM_FREE', '1' );
 defined ( 'YITH_YWZM_FREE_INIT' ) || define ( 'YITH_YWZM_FREE_INIT', plugin_basename ( __FILE__ ) );
 defined ( 'YITH_YWZM_SLUG' ) || define ( 'YITH_YWZM_SLUG', 'yith-woocommerce-zoom-magnifier' );
-defined ( 'YITH_YWZM_VERSION' ) || define ( 'YITH_YWZM_VERSION', '2.52.0' );
+defined ( 'YITH_YWZM_VERSION' ) || define ( 'YITH_YWZM_VERSION', '2.52.1' );
 defined ( 'YITH_YWZM_SCRIPT_VERSION' ) || define ( 'YITH_YWZM_SCRIPT_VERSION', '2.1.1' );
 
 defined ( 'YITH_YWZM_FILE' ) || define ( 'YITH_YWZM_FILE', __FILE__ );
